@@ -5,7 +5,7 @@ const CreateEvent = async () => {
   const { sessionClaims } = await auth();
 
   const userId = sessionClaims?.userId as string;
-  console.log(sessionClaims?.userId);
+  console.log(sessionClaims?.username); //  console.log(sessionClaims?.userId);  Baddlou b hedha ismail
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
