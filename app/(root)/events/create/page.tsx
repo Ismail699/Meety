@@ -2,10 +2,10 @@ import EventForm from "@/components/shared/EventForm";
 import { auth } from "@clerk/nextjs";
 
 const CreateEvent = async () => {
-  const { sessionClaims } = await auth();
+  const { sessionClaims } = auth();
 
   const userId = sessionClaims?.userId as string;
-  console.log(sessionClaims?.username); //  console.log(sessionClaims?.userId);  Baddlou b hedha ismail
+  console.log(sessionClaims?.userId);
   return (
     <>
       <section className="bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
