@@ -61,7 +61,7 @@ export const createOrder = async (order: CreateOrderParams) => {
       event: order.eventId,
       buyer: order.buyerId,
     });
-
+    console.log("haw order" + newOrder);
     return JSON.parse(JSON.stringify(newOrder));
   } catch (error) {
     handleError(error);
@@ -160,7 +160,7 @@ export async function getOrdersByUser({
     const ordersCount = await Order.distinct("event._id").countDocuments(
       conditions
     );
-
+    console.log(userId);
     return {
       data: JSON.parse(JSON.stringify(orders)),
       totalPages: Math.ceil(ordersCount / limit),
